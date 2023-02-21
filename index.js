@@ -161,7 +161,7 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamlayın:
 */
 
 function milDonusturucu(kilometreOlarakDeger){
-  return 0.621371192 * kilometreOlarakDeger;
+  return 0.621371 * kilometreOlarakDeger;
 }
 
 console.log("100 km/s hızla giden araba, " + Math.round(milDonusturucu(100) * 10) / 10 + " mil/s hızıyla gitmektedir.");
@@ -178,7 +178,7 @@ Google'da arama ipucu: "feet cm dönüştürme"
 */
 
 function feetDonusturucu(santimetreOlarakDeger){
-  return 0.032808399 * santimetreOlarakDeger;
+  return santimetreOlarakDeger / 30.48;
 }
 
 console.log("Boyu 1.80 denen insan, aslında " + Math.round(feetDonusturucu(180) * 100) / 100 + " ft. boyundadır");
@@ -230,7 +230,7 @@ function notHesapla(yuzlukSistemdekiSinavSonucu){
   else if (yuzlukSistemdekiSinavSonucu >= 60)
     return "D aldın";
   else
-    "F aldın";
+    return "F aldın";
 }
 
 console.log("Sınavdan 65 alan öğrenciye, öğretmen " + notHesapla(65) + " dedi.");
